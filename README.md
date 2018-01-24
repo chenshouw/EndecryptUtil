@@ -17,7 +17,7 @@ allprojects {
 ```
 ```java
 dependencies {
-    compile 'com.othershe:BaseAdapter:1.2.0'
+    compile 'com.github.whvcse:EndecryptUtil:1.0.1'
 }
 ```
 #### maven方式引入
@@ -30,9 +30,9 @@ dependencies {
 </repositories>
 
 <dependency>
-    <groupId>com.github.User</groupId>
-    <artifactId>Repo</artifactId>
-    <version>Tag</version>
+    <groupId>com.github.whvcse</groupId>
+    <artifactId>EndecryptUtil</artifactId>
+    <version>1.0.1</version>
 </dependency>
 ```
 #### jar包下载
