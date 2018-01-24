@@ -3,6 +3,7 @@ package com.wangfan.endecrypt.crypto;
 import javax.crypto.KeyGenerator;
 import java.security.Key;
 import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 
 /**
  * Base abstract class for supporting symmetric key cipher algorithms.
@@ -44,4 +45,15 @@ public abstract class AbstractSymmetricCipherService extends JcaCipherService {
         return kg.generateKey();
     }
 
+    public Key generateKey(String key) {
+        KeyGenerator kg;
+        try {
+            kg = KeyGenerator.getInstance(getAlgorithmName());
+        } catch (NoSuchAlgorithmException e) {
+            String msg = "Unable to acquire " + getAlgorithmName() + " algorithm.  This is required to function.";
+            throw new IllegalStateException(msg, e);
+        }
+        kg.init(new SecureRandom(key.getBytes()));
+        return kg.generateKey();
+    }
 }
