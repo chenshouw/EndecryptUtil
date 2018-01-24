@@ -15,18 +15,17 @@ import com.wangfan.endecrypt.crypto.hash.Md5Hash;
  */
 public class EndecryptUtils {
 	/**
-	 * base64进制加密
+	 * 将字符串转换成base64编码
 	 * 
-	 * @param password
+	 * @param str
 	 * @return
 	 */
-	public static String encrytBase64(String password) {
-		byte[] bytes = password.getBytes();
-		return Base64.encodeToString(bytes);
+	public static String encrytBase64(String str) {
+		return Base64.encodeToString(str.getBytes());
 	}
 
 	/**
-	 * base64进制解密
+	 * 将base64编码转换成字符串
 	 * 
 	 * @param cipherText
 	 * @return
@@ -36,18 +35,17 @@ public class EndecryptUtils {
 	}
 
 	/**
-	 * 16进制加密
+	 * 将字符串转换成16进制
 	 * 
 	 * @param password
 	 * @return
 	 */
-	public static String encrytHex(String password) {
-		byte[] bytes = password.getBytes();
-		return Hex.encodeToString(bytes);
+	public static String encrytHex(String str) {
+		return Hex.encodeToString(str.getBytes());
 	}
 
 	/**
-	 * 16进制解密
+	 * 将16进制编码转换成字符串
 	 * 
 	 * @param cipherText
 	 * @return
@@ -89,7 +87,6 @@ public class EndecryptUtils {
 		AesCipherService aesCipherService = new AesCipherService();
 		aesCipherService.setKeySize(128);
 		Key key = aesCipherService.generateNewKey();
-		//return Base64.encodeToString(key.getEncoded());
 		return key;
 	}
 
