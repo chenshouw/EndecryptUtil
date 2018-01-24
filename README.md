@@ -19,7 +19,7 @@ dependencies {
 }
 ```
 #### jar包
-[EndecryptUtil.jar]()
+[EndecryptUtil-最新版本.jar](https://github.com/whvcse/EndecryptUtil/releases/tag/1.0.0)
 
 ## 用法
 #### 1.字符串转base64编码
