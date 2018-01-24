@@ -6,19 +6,36 @@ Java、Android加密解密工具类，不依赖于其他库。
 [查看 EndecryptUtil.java 源码](https://github.com/whvcse/EndecryptUtil/blob/master/src/com/wangfan/endecrypt/utils/EndecryptUtils.java)
 
 ## 导入
-#### grade
+#### gradle方式的引入
+需要先在project的build.gradle下添加：
+```java
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
 ```java
 dependencies {
     compile 'com.othershe:BaseAdapter:1.2.0'
 }
 ```
-#### maven
+#### maven方式引入
 ```java
-dependencies {
-    compile 'com.othershe:BaseAdapter:1.2.0'
-}
+<repositories>
+    <repository>
+    <id>jitpack.io</id>
+    <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+
+<dependency>
+    <groupId>com.github.User</groupId>
+    <artifactId>Repo</artifactId>
+    <version>Tag</version>
+</dependency>
 ```
-#### jar包
+#### jar包下载
 [EndecryptUtil-最新版本.jar](https://github.com/whvcse/EndecryptUtil/releases/tag/1.0.0)
 
 ## 用法
