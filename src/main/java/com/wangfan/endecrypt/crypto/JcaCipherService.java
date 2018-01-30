@@ -430,6 +430,7 @@ public abstract class JcaCipherService implements CipherService {
         try {
             return cipher.doFinal(bytes);
         } catch (Exception e) {
+        	e.printStackTrace();
             String msg = "Unable to execute 'doFinal' with cipher instance [" + cipher + "].";
             throw new CryptoException(msg, e);
         }

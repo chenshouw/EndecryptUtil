@@ -50,7 +50,7 @@ public abstract class AbstractSymmetricCipherService extends JcaCipherService {
         	KeyGenerator kg = KeyGenerator.getInstance(getAlgorithmName());
 	        SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG" );
 	        secureRandom.setSeed(key.getBytes());
-	        kg.init(secureRandom);
+	        kg.init(128, secureRandom);
 	        return kg.generateKey();
         } catch (NoSuchAlgorithmException e) {
             String msg = "Unable to acquire " + getAlgorithmName() + " algorithm.  This is required to function.";
