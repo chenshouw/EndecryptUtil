@@ -1,10 +1,7 @@
 package com.wangfan.endecrypt.utils;
 
-import java.security.Key;
-
 import com.wangfan.endecrypt.codec.Base64;
 import com.wangfan.endecrypt.codec.Hex;
-import com.wangfan.endecrypt.crypto.AesCipherService;
 import com.wangfan.endecrypt.crypto.hash.Md5Hash;
 
 /**
@@ -75,61 +72,29 @@ public class EndecryptUtils {
 	}
 
 	/**
-	 * aes加密
+	 * AES加密, 这种方法只适合于windows系统
 	 * 
 	 * @param password
 	 *            明文
 	 * @param key
-	 *            密钥
+	 *            自定义密钥
 	 * @return
 	 */
-	public static String encrytAes(String password, Key key) {
-		try {
-			AesCipherService aesCipherService = new AesCipherService();
-			String aes_cipherText = aesCipherService.encrypt(
-					password.getBytes(), key.getEncoded()).toHex();
-			return aes_cipherText;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
+	public static String encrytAes(String password, String keyStr) {
+		return AESUtil.encrytAes(password, AESUtil.generateKey(keyStr));
 	}
 
 	/**
-	 * aes解密
+	 * AES解密
 	 * 
 	 * @param cipherText
 	 *            密文
 	 * @param key
-	 *            密钥
+	 *            自定义密钥
 	 * @return
 	 */
-	public static String decryptAes(String cipherText, Key key) {
-		try {
-			AesCipherService aesCipherService = new AesCipherService();
-			String aes_mingwen = new String(aesCipherService.decrypt(
-					Hex.decode(cipherText), key.getEncoded()).getBytes());
-			return aes_mingwen;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
-
-	/**
-	 * 生成密钥
-	 * 
-	 * @return
-	 * @author wangfan
-	 */
-	public static Key generateKey(String key) {
-		try {
-			AesCipherService aesCipherService = new AesCipherService();
-			return aesCipherService.generateKey(key);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
+	public static String decryptAes(String cipherText, String keyStr) {
+		return AESUtil.decryptAes(cipherText, AESUtil.generateKey(keyStr));
 	}
 
 	/**
@@ -169,5 +134,5 @@ public class EndecryptUtils {
 		}
 		return null;
 	}
-	
+
 }
