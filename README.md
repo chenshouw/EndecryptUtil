@@ -17,7 +17,7 @@ allprojects {
 ```
 ```java
 dependencies {
-    compile 'com.github.whvcse:EndecryptUtil:1.0.3'
+    compile 'com.github.whvcse:EndecryptUtil:1.0.4'
 }
 ```
 #### maven方式引入
@@ -32,7 +32,7 @@ dependencies {
 <dependency>
     <groupId>com.github.whvcse</groupId>
     <artifactId>EndecryptUtil</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
 </dependency>
 ```
 #### jar包下载
