@@ -1,7 +1,7 @@
 # EndecryptUtil
 
 ## 简介
-Java、Android加密解密工具类，不依赖于其他库。
+Java、Android(安卓)加密解密工具类，不依赖于其他库。
 
 [查看 EndecryptUtil.java 源码](https://github.com/whvcse/EndecryptUtil/blob/master/src/main/java/com/wangfan/endecrypt/utils/EndecryptUtils.java)
 
@@ -17,7 +17,7 @@ allprojects {
 ```
 ```java
 dependencies {
-    compile 'com.github.whvcse:EndecryptUtil:1.0.1'
+    compile 'com.github.whvcse:EndecryptUtil:1.0.2'
 }
 ```
 #### maven方式引入
@@ -32,7 +32,7 @@ dependencies {
 <dependency>
     <groupId>com.github.whvcse</groupId>
     <artifactId>EndecryptUtil</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 #### jar包下载
