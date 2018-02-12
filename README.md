@@ -1,4 +1,8 @@
 # EndecryptUtil
+[![GitHub release](https://img.shields.io/github/release/whvcse/EndecryptUtil.svg)]()
+[![GitHub Release Date](https://img.shields.io/github/release-date/whvcse/EndecryptUtil.svg)]()
+[![JitPack](https://img.shields.io/jitpack/v/whvcse/EndecryptUtil.svg)]()
+[![author](https://img.shields.io/badge/author-wangfan-ff69b4.svg)]()
 
 ## 简介
 Java、Android(安卓)加密解密工具类，不依赖于其他库。
