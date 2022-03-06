@@ -40,7 +40,7 @@ dependencies {
 </dependency>
 ```
 #### jar包下载
-[EndecryptUtil-最新版本.jar](https://github.com/whvcse/EndecryptUtil/releases)
+
 
 ## 用法
 #### 1.字符串转base64编码
