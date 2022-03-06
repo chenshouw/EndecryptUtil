@@ -7,7 +7,7 @@
 ## 简介
 Java、Android(安卓)加密解密工具类，不依赖于其他库。
 
-[查看 EndecryptUtil.java 源码](https://github.com/whvcse/EndecryptUtil/blob/master/src/main/java/com/wangfan/endecrypt/utils/EndecryptUtils.java)
+[查看 EndecryptUtil.java 源码](https://github.com/chenshouw/EndecryptUtil/blob/master/src/main/java/com/wangfan/endecrypt/utils/EndecryptUtils.java)
 
 ## 导入
 #### gradle方式的引入
